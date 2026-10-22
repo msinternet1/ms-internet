@@ -1,1 +1,191 @@
 
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#07152d">
+<meta name="description" content="MS Internet — দ্রুত ও নির্ভরযোগ্য ইন্টারনেট সেবা।">
+<title>MS Internet | Official Website</title>
+<style>
+:root{--bg:#f4f7fc;--card:#fff;--text:#14213b;--muted:#66758d;--line:#e0e8f3;--blue:#087cf0}
+[data-theme="dark"]{--bg:#07111f;--card:#101f33;--text:#edf5ff;--muted:#a5b5cc;--line:#263750}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:120px}
+body{margin:0;font-family:system-ui,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+a{color:inherit;text-decoration:none}
+button,input,textarea,select{font:inherit}
+button{cursor:pointer}
+.container{width:min(1100px,92%);margin:auto}
+.notice{position:sticky;top:0;z-index:100;display:flex;background:#06152f;color:#fff;min-height:46px;overflow:hidden;border-bottom:1px solid #168bff}
+.notice-label{background:#ef1745;padding:10px 14px;font-weight:800;white-space:nowrap}
+.ticker-window{overflow:hidden;white-space:nowrap;flex:1;display:flex;align-items:center}
+.ticker{display:inline-flex;width:max-content;animation:scroll 30s linear infinite}
+.ticker span{padding:0 24px;font-size:14px}
+.ticker strong{color:#ffe66b}
+.notice:hover .ticker{animation-play-state:paused}
+@keyframes scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.topline{background:#07152d;color:#d9e8ff;padding:7px 0;font-size:13px}
+.topline .container{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.topline a{color:#ffe66b}
+header{position:sticky;top:46px;z-index:90;background:var(--card);border-bottom:1px solid var(--line)}
+.nav{min-height:72px;display:flex;align-items:center;justify-content:space-between;gap:15px}
+.brand{font-weight:900;font-size:20px;display:flex;align-items:center;gap:10px}
+.logo{display:grid;place-items:center;width:43px;height:43px;border-radius:13px;background:linear-gradient(135deg,#087cf0,#00c8ff);color:white}
+.brand small{display:block;font-size:10px;letter-spacing:1.5px;color:var(--muted)}
+.links{display:flex;gap:18px;font-size:14px;font-weight:700}
+.links a:hover{color:var(--blue)}
+.actions{display:flex;gap:7px}
+.iconbtn{background:var(--card);color:var(--text);border:1px solid var(--line);padding:8px 10px;border-radius:10px}
+.btn{display:inline-block;border:0;border-radius:12px;background:linear-gradient(135deg,#087cf0,#00a9ff);color:white;padding:12px 18px;font-weight:800;text-align:center}
+.btn.green{background:#16a765}
+.btn.outline{background:transparent;border:1px solid var(--line);color:var(--text)}
+.menu{display:none}
+.hero{background:radial-gradient(ellipse at 80% 20%,#087cf04d,transparent 40%),linear-gradient(125deg,#06152f,#0a2a55 65%,#064b7c);color:white;padding:78px 0}
+.hero-grid{display:grid;grid-template-columns:1.2fr .8fr;align-items:center;gap:35px}
+.pill{display:inline-block;border:1px solid #ffffff44;background:#ffffff12;border-radius:30px;padding:7px 13px;color:#bfe8ff;font-size:13px}
+h1{font-size:clamp(38px,5vw,62px);line-height:1.12;letter-spacing:-1px;margin:20px 0}
+.gradient{background:linear-gradient(90deg,#fff,#77e2ff);color:transparent;background-clip:text}
+.hero p{font-size:17px;color:#d1e2fa;max-width:600px}
+.hero-buttons{display:flex;gap:10px;flex-wrap:wrap;margin-top:25px}
+.hero .outline{color:white;border-color:#ffffff55}
+.hero-card{padding:28px;border:1px solid #ffffff35;background:#ffffff12;border-radius:25px;text-align:center;animation:float 5s ease-in-out infinite}
+.orb{width:175px;height:175px;border:1px solid #7bdfff99;border-radius:50%;display:grid;place-items:center;margin:0 auto 22px;background:radial-gradient(circle,#0b75c9aa,#ffffff06 70%)}
+.orb b{display:block;font-size:48px;line-height:1}.orb span{font-size:12px;letter-spacing:2px;color:#c6eaff}
+.stats{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.stats div{padding:12px;border:1px solid #ffffff30;border-radius:12px}
+.stats b{display:block;font-size:21px}.stats small{color:#c5d8ef}
+@keyframes float{50%{transform:translateY(-8px)}}
+section{padding:70px 0}
+.heading{text-align:center;max-width:720px;margin:0 auto 35px}
+.kicker{color:var(--blue);font-size:12px;font-weight:900;letter-spacing:2px}
+h2{font-size:clamp(28px,4vw,40px);line-height:1.2;margin:10px 0}
+.heading p,.muted{color:var(--muted)}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:24px;box-shadow:0 12px 35px #102d540c}
+.feature-icon{font-size:26px;background:#087cf014;color:var(--blue);width:49px;height:49px;display:grid;place-items:center;border-radius:14px}
+.card h3{margin:13px 0 5px}.card p{color:var(--muted);font-size:14px}
+.packages{background:var(--card)}
+.package{position:relative}.package.popular{border:2px solid var(--blue)}
+.tag{display:inline-block;color:var(--blue);background:#087cf015;border-radius:8px;padding:5px 9px;font-size:11px;font-weight:900}
+.speed{font-size:42px;font-weight:950;margin:12px 0 0}
+.speed small{font-size:15px;color:var(--muted)}
+.price{font-size:14px;color:var(--muted)}
+.package ul{padding:0;list-style:none}
+.package li{padding:8px 0;border-bottom:1px solid var(--line);font-size:14px}
+.package li:before{content:"✓ ";color:#13ad76;font-weight:900}
+.package .btn{width:100%;margin-top:10px}
+.table-wrap{overflow:auto;margin-top:25px}
+table{border-collapse:collapse;width:100%;min-width:450px;background:var(--bg)}
+td,th{text-align:left;padding:13px;border-bottom:1px solid var(--line)}
+th{background:#087cf015}
+.promo{background:linear-gradient(120deg,#087cf0,#064c9d);color:white;border-radius:24px;padding:30px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.promo h2{margin-top:0}.promo p{color:#e0efff}.promo .btn{background:white;color:#0755a6}
+.notice-card h3{font-size:17px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:22px;align-items:start}
+.field{display:grid;gap:6px;margin-bottom:14px}
+.field label{font-weight:750;font-size:13px}
+.field input,.field textarea,.field select,.search{width:100%;padding:12px;border:1px solid var(--line);border-radius:11px;background:var(--bg);color:var(--text)}
+.field textarea{min-height:100px;resize:vertical}
+.field input:focus,.field textarea:focus{outline:2px solid #087cf044}
+.area-list{display:flex;gap:8px;flex-wrap:wrap}
+.area-list span{border:1px solid var(--line);padding:7px 11px;border-radius:20px;font-size:13px}
+.status{background:var(--bg);padding:13px;border-radius:12px;margin:12px 0}
+.status small{display:block;color:var(--muted)}
+.faq-list{max-width:800px;margin:auto;display:grid;gap:10px}
+.faq{background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.faq button{width:100%;text-align:left;padding:17px;border:0;background:transparent;color:var(--text);font-weight:800;display:flex;justify-content:space-between}
+.answer{padding:0 17px 17px;color:var(--muted);font-size:14px}
+.review small{color:var(--muted)}
+.maplink{display:block;background:#087cf012;border:1px dashed #087cf055;border-radius:16px;padding:25px;text-align:center;margin-top:20px}
+footer{background:#06152f;color:#d8e7ff;padding:42px 0 20px}
+.footer-grid{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:25px}
+footer a,footer p{display:block;color:#aebfda;font-size:14px;margin:8px 0}
+.footer-bottom{border-top:1px solid #ffffff22;margin-top:25px;padding-top:15px;font-size:12px;color:#aebfda}
+.floating{position:fixed;right:17px;bottom:17px;z-index:80;border-radius:50%;width:56px;height:56px;display:grid;place-items:center;background:#16a765;color:white;font-size:25px;box-shadow:0 10px 25px #16a76555}
+@media(max-width:850px){.hero-grid{grid-template-columns:1fr}.links{display:none;position:absolute;top:70px;left:4%;right:4%;padding:18px;background:var(--card);border:1px solid var(--line);border-radius:14px;flex-direction:column}.links.open{display:flex}.menu{display:block}.grid3{grid-template-columns:1fr 1fr}.two{grid-template-columns:1fr}.footer-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.grid3,.footer-grid{grid-template-columns:1fr}.hero{padding:55px 0}.hero p{font-size:15px}.hero-card{padding:20px}.orb{width:145px;height:145px}.promo{flex-direction:column;align-items:flex-start}.promo .btn{width:100%}.notice-label{padding:10px;font-size:12px}.ticker span{font-size:12px;padding:0 16px}.brand{font-size:17px}.logo{width:39px;height:39px}section{padding:55px 0}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<div class="notice">
+ <div class="notice-label">📢 <span data-bn="নোটিশ" data-en="NOTICE">নোটিশ</span></div>
+ <div class="ticker-window"><div class="ticker">
+  <span>🌐 <strong>MS Internet</strong> — দ্রুত ও নির্ভরযোগ্য ইন্টারনেট সেবা</span>
+  <span>📞 নতুন সংযোগ: <strong>01990919626</strong></span>
+  <span>💬 কভারেজ ও প্যাকেজ জানতে WhatsApp করুন</span>
+  <span>⚡ ২০ / ৩০ / ৫০ Mbps প্যাকেজ সম্পর্কে জানতে যোগাযোগ করুন</span>
+  <span>🌐 <strong>MS Internet</strong> — দ্রুত ও নির্ভরযোগ্য ইন্টারনেট সেবা</span>
+  <span>📞 নতুন সংযোগ: <strong>01990919626</strong></span>
+  <span>💬 কভারেজ ও প্যাকেজ জানতে WhatsApp করুন</span>
+  <span>⚡ ২০ / ৩০ / ৫০ Mbps প্যাকেজ সম্পর্কে জানতে যোগাযোগ করুন</span>
+ </div></div>
+</div>
+<div class="topline"><div class="container">⚡ আপনার এলাকার ইন্টারনেট সংযোগ <span><a href="tel:01990919626">☎ 01990919626</a> · <a href="https://wa.me/8801990919626">WhatsApp</a></span></div></div>
+<header><div class="container nav">
+ <a class="brand" href="#home"><span class="logo">MS</span><span>MS INTERNET<small>CONNECTING YOUR WORLD</small></span></a>
+ <nav class="links" id="links"><a href="#home">হোম</a><a href="#packages">প্যাকেজ</a><a href="#coverage">কভারেজ</a><a href="#notices">নোটিশ</a><a href="#faq">প্রশ্নোত্তর</a><a href="#contact">যোগাযোগ</a></nav>
+ <div class="actions"><button class="iconbtn" id="lang">EN</button><button class="iconbtn" id="theme">☾</button><button class="iconbtn menu" id="menu">☰</button></div>
+</div></header>
+<main>
+<section class="hero" id="home"><div class="container hero-grid"><div>
+ <span class="pill">● আপনার কানেক্টিভিটি, আমাদের অঙ্গীকার</span>
+ <h1>ইন্টারনেট হোক <span class="gradient">আরও দ্রুত।</span><br>জীবন হোক সহজ।</h1>
+ <p>বাসা, পড়াশোনা, কাজ ও বিনোদনের জন্য ইন্টারনেট প্যাকেজ সম্পর্কে জানুন। আপনার এলাকায় সংযোগ পাওয়া যায় কি না, যাচাই করুন আজই।</p>
+ <div class="hero-buttons"><a class="btn green" href="https://wa.me/8801990919626?text=আমি%20নতুন%20সংযোগের%20বিস্তারিত%20জানতে%20চাই">☏ WhatsApp-এ যোগাযোগ</a><a class="btn outline" href="#packages">প্যাকেজ দেখুন ↓</a></div>
+ <p>✓ বিভিন্ন স্পিড প্যাকেজ　 ✓ সহজ যোগাযোগ　 ✓ কভারেজ যাচাই</p>
+ </div><div class="hero-card"><div class="orb"><div><b>MS</b><span>INTERNET</span></div></div><div class="stats"><div><b>20–50</b><small>Mbps প্যাকেজ</small></div><div><b>☎</b><small>সরাসরি যোগাযোগ</small></div></div><p style="font-size:11px">সেবার সময় ও প্রাপ্যতা নিশ্চিত করতে যোগাযোগ করুন।</p></div></div></section>
+<section><div class="container"><div class="heading"><span class="kicker">WHY MS INTERNET</span><h2>আপনার প্রয়োজন অনুযায়ী সংযোগ</h2><p>ব্যবহারের ধরন অনুযায়ী প্যাকেজ বেছে নিন। কভারেজ ও ইনস্টলেশনের বিস্তারিত আমাদের সঙ্গে যাচাই করুন।</p></div><div class="grid3">
+ <article class="card"><div class="feature-icon">⚡</div><h3>বিভিন্ন স্পিড</h3><p>আপনার ব্যবহার অনুযায়ী ২০, ৩০ বা ৫০ Mbps প্যাকেজ সম্পর্কে জানুন।</p></article>
+ <article class="card"><div class="feature-icon">📶</div><h3>কভারেজ যাচাই</h3><p>আপনার ঠিকানা পাঠিয়ে এলাকায় সংযোগ পাওয়া যায় কি না জেনে নিন।</p></article>
+ <article class="card"><div class="feature-icon">💬</div><h3>সহজ যোগাযোগ</h3><p>নতুন সংযোগ, প্যাকেজ ও সহায়তার জন্য WhatsApp করুন।</p></article>
+</div></div></section>
+<section class="packages" id="packages"><div class="container"><div class="heading"><span class="kicker">OUR PACKAGES</span><h2>আপনার জন্য সঠিক প্যাকেজ</h2><p>মূল্য এখনো নির্ধারিত হয়নি। সর্বশেষ মাসিক মূল্য জানতে যোগাযোগ করুন।</p></div><div class="grid3">
+ <article class="card package"><h3>Starter</h3><div class="speed">20 <small>Mbps</small></div><p class="price">মাসিক মূল্য: পরে নির্ধারণ হবে</p><ul><li>দৈনন্দিন ব্রাউজিং</li><li>সোশ্যাল মিডিয়া</li><li>অনলাইন ক্লাস ও ভিডিও</li></ul><a class="btn outline" href="https://wa.me/8801990919626?text=২০%20Mbps%20প্যাকেজের%20বিস্তারিত%20জানতে%20চাই">বিস্তারিত জানুন</a></article>
+ <article class="card package popular"><span class="tag">জনপ্রিয় পছন্দ</span><h3>Family</h3><div class="speed">30 <small>Mbps</small></div><p class="price">মাসিক মূল্য: পরে নির্ধারণ হবে</p><ul><li>একাধিক ডিভাইস</li><li>ভিডিও স্ট্রিমিং</li><li>পরিবারের দৈনন্দিন ব্যবহার</li></ul><a class="btn" href="https://wa.me/8801990919626?text=৩০%20Mbps%20প্যাকেজের%20বিস্তারিত%20জানতে%20চাই">বিস্তারিত জানুন</a></article>
+ <article class="card package"><h3>Premium</h3><div class="speed">50 <small>Mbps</small></div><p class="price">মাসিক মূল্য: পরে নির্ধারণ হবে</p><ul><li>উচ্চ ব্যান্ডউইথ ব্যবহার</li><li>একাধিক ব্যবহারকারী</li><li>কাজ ও বিনোদন</li></ul><a class="btn outline" href="https://wa.me/8801990919626?text=৫০%20Mbps%20প্যাকেজের%20বিস্তারিত%20জানতে%20চাই">বিস্তারিত জানুন</a></article>
+</div><div class="table-wrap"><table><tr><th>বৈশিষ্ট্য</th><th>20 Mbps</th><th>30 Mbps</th><th>50 Mbps</th></tr><tr><td>মাসিক মূল্য</td><td colspan="3">যোগাযোগ করে জেনে নিন</td></tr><tr><td>ব্যবহার</td><td>দৈনন্দিন</td><td>পরিবার</td><td>বেশি ব্যবহার</td></tr></table></div></div></section>
+<section><div class="container"><div class="promo"><div><h2>নতুন সংযোগ নিতে চান?</h2><p>আপনার এলাকা ও পছন্দের স্পিড জানিয়ে WhatsApp-এ যোগাযোগ করুন।</p></div><a class="btn" href="https://wa.me/8801990919626?text=আমি%20নতুন%20ইন্টারনেট%20সংযোগ%20নিতে%20চাই">WhatsApp ↗</a></div></div></section>
+<section id="notices"><div class="container"><div class="heading"><span class="kicker">LATEST UPDATES</span><h2>নোটিশ ও ঘোষণা</h2><p>নিচের তথ্য নমুনা। বাস্তব ঘোষণা প্রকাশের আগে আপডেট করুন।</p></div><div class="grid3">
+ <article class="card notice-card"><span class="tag">সেবা তথ্য</span><h3>নতুন সংযোগের তথ্য</h3><p>নতুন সংযোগের আগে কভারেজ, ইনস্টলেশন ফি ও মাসিক মূল্য নিশ্চিত করুন।</p></article>
+ <article class="card notice-card"><span class="tag">রক্ষণাবেক্ষণ</span><h3>রক্ষণাবেক্ষণ ঘোষণা</h3><p>নির্ধারিত কাজ থাকলে এখানে সময় ও এলাকার তথ্য প্রকাশ করুন।</p></article>
+ <article class="card notice-card"><span class="tag">নেটওয়ার্ক স্ট্যাটাস</span><h3>লাইভ স্ট্যাটাস সংযুক্ত নয়</h3><p>বর্তমানে লাইভ নেটওয়ার্ক মনিটরিং নেই। প্রকৃত অবস্থা জানতে ফোন করুন।</p></article>
+</div></div></section>
+<section id="coverage"><div class="container"><div class="heading"><span class="kicker">COVERAGE CHECK</span><h2>আপনার এলাকায় সংযোগ আছে?</h2><p>ফর্ম পূরণ করলে WhatsApp-এ বার্তা তৈরি হবে; এটি নিজে থেকে কভারেজ যাচাই বা তথ্য সংরক্ষণ করে না।</p></div><div class="two">
+ <form class="card" id="coverageForm"><h3>কভারেজ যাচাই ফর্ম</h3><div class="field"><label for="cname">আপনার নাম</label><input id="cname" required placeholder="নাম লিখুন"></div><div class="field"><label for="carea">এলাকা ও ঠিকানা</label><input id="carea" required placeholder="গ্রাম/এলাকা, থানা"></div><div class="field"><label for="cspeed">পছন্দের প্যাকেজ</label><select id="cspeed"><option>20 Mbps</option><option>30 Mbps</option><option>50 Mbps</option></select></div><button class="btn green" type="submit">WhatsApp-এ পাঠান ↗</button><p class="muted">WhatsApp খুলবে; পাঠানোর আগে বার্তা দেখে নিতে পারবেন।</p></form>
+ <div class="card"><h3>কভারেজ ও নেটওয়ার্ক</h3><p class="muted">নিশ্চিত কভারেজ এলাকার তালিকা এখনো যোগ করা হয়নি। আপনার এলাকা পাঠিয়ে যাচাইয়ের অনুরোধ করুন।</p><div class="area-list"><span>📍 এলাকা যাচাই সাপেক্ষে</span></div><div class="status">🟠 <b>লাইভ নেটওয়ার্ক স্ট্যাটাস নেই</b><small>প্রকৃত অবস্থা জানতে যোগাযোগ করুন।</small></div><a class="btn outline" href="tel:01990919626">☎ 01990919626</a></div>
+</div></div></section>
+<section id="faq" style="background:var(--card)"><div class="container"><div class="heading"><span class="kicker">HELP CENTER</span><h2>সাধারণ প্রশ্নোত্তর</h2><p>প্রশ্ন খুঁজে দেখুন।</p></div><input class="search" id="faqSearch" placeholder="প্রশ্ন খুঁজুন..." style="display:block;max-width:520px;margin:0 auto 20px"><div class="faq-list">
+ <div class="faq"><button type="button">প্যাকেজের মাসিক মূল্য কত? <span>＋</span></button><div class="answer" hidden>মূল্য এখনো নির্ধারণ করা হয়নি। বর্তমান মূল্য জানতে 01990919626 নম্বরে যোগাযোগ করুন।</div></div>
+ <div class="faq"><button type="button">আমার এলাকায় সংযোগ পাওয়া যাবে কি? <span>＋</span></button><div class="answer" hidden>কভারেজ ফর্ম পূরণ করুন অথবা আপনার ঠিকানা WhatsApp-এ পাঠান।</div></div>
+ <div class="faq"><button type="button">নতুন সংযোগ কীভাবে নেব? <span>＋</span></button><div class="answer" hidden>WhatsApp বাটনে চাপ দিয়ে নাম, এলাকা ও পছন্দের প্যাকেজ পাঠান।</div></div>
+ <div class="faq"><button type="button">সমস্যা বা অভিযোগ জানাব কীভাবে? <span>＋</span></button><div class="answer" hidden>নিচের অভিযোগ ফর্ম পূরণ করে WhatsApp-এ বার্তা পাঠাতে পারবেন।</div></div>
+ <div class="faq"><button type="button">ওয়েবসাইটে অনলাইনে বিল দেওয়া যাবে? <span>＋</span></button><div class="answer" hidden>না। এই ওয়েবসাইটে লগইন, বিলিং বা পেমেন্ট সুবিধা নেই।</div></div>
+ <div class="faq"><button type="button">লাইভ নেটওয়ার্ক স্ট্যাটাস কোথায় দেখব? <span>＋</span></button><div class="answer" hidden>লাইভ মনিটরিং যুক্ত নেই। প্রকৃত অবস্থা জানতে ফোন করুন।</div></div>
+</div></div></section>
+<section id="contact"><div class="container"><div class="heading"><span class="kicker">CUSTOMER SUPPORT</span><h2>অভিযোগ বা সহায়তা</h2><p>তথ্য দিয়ে WhatsApp-এ বার্তা তৈরি করুন। এটি কোনো সার্ভারে তথ্য সংরক্ষণ করে না।</p></div><div class="two">
+ <form class="card" id="complaintForm"><div class="field"><label for="pname">আপনার নাম</label><input id="pname" required></div><div class="field"><label for="phone">যোগাযোগ নম্বর</label><input id="phone" type="tel" required placeholder="01XXXXXXXXX"></div><div class="field"><label for="type">সমস্যার ধরন</label><select id="type"><option>ইন্টারনেট সংযোগ নেই</option><option>স্পিড সমস্যা</option><option>নতুন সংযোগ</option><option>অন্যান্য</option></select></div><div class="field"><label for="details">সমস্যার বিস্তারিত</label><textarea id="details" required></textarea></div><button class="btn green" type="submit">WhatsApp-এ অভিযোগ পাঠান ↗</button></form>
+ <div class="card"><h3>সরাসরি যোগাযোগ</h3><p class="muted">নতুন সংযোগ, কভারেজ, প্যাকেজ বা সহায়তার জন্য যোগাযোগ করুন।</p><div class="status">☎️ <small>ফোন নম্বর</small><b><a href="tel:01990919626">01990919626</a></b></div><div class="status">💬 <small>WhatsApp</small><b><a href="https://wa.me/8801990919626">01990919626</a></b></div><a class="maplink" href="https://www.google.com/maps/search/?api=1&query=internet+service+provider+near+me" target="_blank">📍 Google Maps-এ খুঁজুন<p class="muted">অফিসের সঠিক ঠিকানা এখনো যোগ করা হয়নি।</p></a></div>
+</div></div></section>
+<section><div class="container"><div class="heading"><span class="kicker">CUSTOMER FEEDBACK</span><h2>গ্রাহকদের মতামত</h2><p>এগুলো নমুনা—বাস্তব গ্রাহকের রিভিউ নয়। প্রকাশের আগে প্রকৃত মতামত দিয়ে বদলান।</p></div><div class="grid3"><article class="card review"><b style="color:#ffb400">★★★★★</b><p>“গ্রাহকের প্রকৃত মতামত এখানে যোগ করুন।”</p><small>নমুনা রিভিউ</small></article><article class="card review"><b style="color:#ffb400">★★★★★</b><p>“অনুমতি নিয়ে যাচাইকৃত গ্রাহক ফিডব্যাক প্রকাশ করুন।”</p><small>নমুনা রিভিউ</small></article><article class="card review"><b style="color:#ffb400">★★★★★</b><p>“এখানে বাস্তব গ্রাহকদের মতামত দেখানো যাবে।”</p><small>নমুনা রিভিউ</small></article></div></div></section>
+</main>
+<footer><div class="container"><div class="footer-grid"><div><b style="font-size:22px">🌐 MS INTERNET</b><p>আপনার এলাকার ইন্টারনেট সংযোগ ও নতুন সংযোগের অনুরোধ করতে যোগাযোগ করুন।</p></div><div><b>দ্রুত লিংক</b><a href="#packages">প্যাকেজ</a><a href="#coverage">কভারেজ যাচাই</a><a href="#faq">প্রশ্নোত্তর</a><a href="#contact">অভিযোগ</a></div><div><b>যোগাযোগ</b><a href="tel:01990919626">☎ 01990919626</a><a href="https://wa.me/8801990919626">WhatsApp</a><p>অফিসের ঠিকানা যোগ করা বাকি।</p></div></div><div class="footer-bottom">© <span id="year"></span> MS Internet. All rights reserved. · প্যাকেজ মূল্য ও কভারেজ নিশ্চিত করে নিন।</div></div></footer>
+<a class="floating" href="https://wa.me/8801990919626?text=MS%20Internet%20সম্পর্কে%20জানতে%20চাই" aria-label="WhatsApp">✆</a>
+<script>
+const $=s=>document.querySelector(s);
+$('#year').textContent=new Date().getFullYear();
+$('#menu').addEventListener('click',()=>$('#links').classList.toggle('open'));
+document.querySelectorAll('#links a').forEach(a=>a.addEventListener('click',()=>$('#links').classList.remove('open')));
+$('#theme').addEventListener('click',()=>{let d=document.documentElement.getAttribute('data-theme')!=='dark';document.documentElement.setAttribute('data-theme',d?'dark':'light');$('#theme').textContent=d?'☀':'☾';try{localStorage.setItem('ms-theme',d?'dark':'light')}catch(e){}});
+try{let t=localStorage.getItem('ms-theme');if(t){document.documentElement.setAttribute('data-theme',t);$('#theme').textContent=t==='dark'?'☀':'☾'}}catch(e){}
+let lang='bn';
+$('#lang').addEventListener('click',()=>{lang=lang==='bn'?'en':'bn';document.documentElement.lang=lang;document.querySelectorAll('[data-bn][data-en]').forEach(e=>e.innerHTML=e.getAttribute('data-'+lang));$('#lang').textContent=lang==='bn'?'EN':'বাংলা'});
+function wa(msg){window.open('https://wa.me/8801990919626?text='+encodeURIComponent(msg),'_blank')}
+$('#coverageForm').addEventListener('submit',e=>{e.preventDefault();wa('MS Internet কভারেজ যাচাই অনুরোধ\nনাম: '+$('#cname').value+'\nএলাকা: '+$('#carea').value+'\nপ্যাকেজ: '+$('#cspeed').value)});
+$('#complaintForm').addEventListener('submit',e=>{e.preventDefault();wa('MS Internet অভিযোগ/সহায়তা\nনাম: '+$('#pname').value+'\nযোগাযোগ: '+$('#phone').value+'\nসমস্যা: '+$('#type').value+'\nবিস্তারিত: '+$('#details').value)});
+document.querySelectorAll('.faq button').forEach(b=>b.addEventListener('click',()=>{let a=b.nextElementSibling;a.hidden=!a.hidden;b.lastElementChild.textContent=a.hidden?'＋':'−'}));
+$('#faqSearch').addEventListener('input',e=>{let q=e.target.value.toLowerCase();document.querySelectorAll('.faq').forEach(f=>f.hidden=!f.textContent.toLowerCase().includes(q))});
+</script>
+</body>
+</html>
